@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;700&family=Roboto:ital,wght@0,400;1,700&family=Saira+Condensed:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+body{
+    margin: 0;
+    /* background-color: */
+}
+
+h1,
+h2,
+h3{
+font-weight: bold;
+}

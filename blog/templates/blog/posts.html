@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/posts.css' %}">
+<link rel="stylesheet" href="{% static 'blog/includes/header.css' %}">
+{% endblock css_files %}
+
+{% block page_title %}{% endblock page_title %}
+
+{% block content %}
+{% include 'blog/includes/header.html' %}
+
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia facilis distinctio aliquid nostrum saepe hic nam aut rem alias, enim corporis iste repellendus tenetur necessitatibus quibusdam, voluptate velit repellat quidem?
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+<link rel="stylesheet" href="{% static 'blog/includes/header.css' %}" />
+{% endblock css_files %} 
+
+{% block page_title %} Mike's Desk - Home {% endblock page_title %} 
+
+{% block content %} 
+
+{% comment %} {% include 'blog/includes/header.html' %} {% endcomment %}
+
+<header id="main-navigation">
+    <h1><a href="{% url 'index' %}"> Mike's Desk </a></h1>
+    <nav>
+        <a href="{% url 'posts' %}">All posts</a>
+    </nav>
+</header>
+
+
+<section id="welcome">
+  <header>
+    <img src="{% static 'blog/images/hasbullah.jpg' %}" alt="my picture" />
+    <h1>Michael's Desk</h1>
+  </header>
+  <p>  
+    Hello, I'm Mike and I love to blog about tech and the world, I aim to help
+    out newbies in tech with my articles. WELCOME!!!!!
+  </p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+
+  <ul>
+    <li>
+      <article class="post">
+        <a href="">
+          <img src="{% static 'blog/images/kobe.jpg' %}" alt="" />
+          <div class="post__content">
+            <h3>Mountain hiking</h3>
+            <p>
+              There is nothing like the views you get when hiking in the
+              mountains! And I wasnt't even prepared for what happened whilst I
+              was enjoying the view!
+            </p>
+          </div>
+        </a>
+      </article>
+    </li>
+  </ul>
+</section>
+
+<section id="about">
+  <h2>What I do</h2>
+  <p>
+    I look to help provide newbies with simplified knowledge on the different
+    areas in the technology sphere
+  </p>
+  <p>My goal is to help people  grow in technlogy and help people make their dreams come through</p>
+</section>
+
+{% endblock content %}
