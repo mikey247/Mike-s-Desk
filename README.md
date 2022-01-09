@@ -1,0 +1,1 @@
+# Mike-s-Desk is a pet project of mine, i aim to build a full blog where i write about a range of topics aimed at helping to give beginners in software direction by helping them understand common concepts.
