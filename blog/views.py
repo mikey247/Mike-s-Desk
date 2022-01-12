@@ -52,10 +52,6 @@ all_posts = [
 def get_date(post):
     return post['date']
 
-
-
-
-
 # Create your views here.
 
 def index(request):
