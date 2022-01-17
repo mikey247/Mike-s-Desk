@@ -20,7 +20,8 @@ body{
 }
 #summary h2{
   color: white;
-  font-size: 4.5rem;
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
 }
 #summary article{
     position: absolute;
@@ -39,10 +40,13 @@ body{
     border: 5px solid white;
     margin-bottom: 1rem;
 }
-summary address{
+/* summary address{
    font-weight: bold; 
+} */
+#summary a{
+    color: white;
+    text-decoration: none;
 }
-
 #summary time{
     font-weight: bold;
 }
@@ -56,4 +60,11 @@ main{
     position: relative;
     box-shadow: 0 2px 8px rgba(0, 0, 0.25);
     
+}
+
+.tag{
+    background-color: white;
+    color: #390281;
+    padding: 0.5rem 0.5rem;
+    border-radius: 8px;
 }
