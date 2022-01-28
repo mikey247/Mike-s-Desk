@@ -1,9 +1,11 @@
 from django.urls import path
-from . import views
+from blog.views import IndexPage,AllPosts, PostDetail, ReadLaterView  #remove_post
 
 urlpatterns = [
-  path( "",views.index, name="index"),
-  path('posts', views.posts, name="posts-page" ),
-  path("posts/<slug:slug>", views.post_detail, name="post-detail-page") ,
-  # path("comment", views.comment, name="comment-section")
-]
+  path( "",IndexPage.as_view(), name="index"),
+  path('posts',AllPosts.as_view(), name="posts-page" ),
+  path("posts/<slug:slug>", PostDetail.as_view(), name="post-detail-page") ,
+  path("read-later", ReadLaterView.as_view(), name="read-later" ),
+  # path("remove-post", remove_post, name="remove-post"),
+
+ ]

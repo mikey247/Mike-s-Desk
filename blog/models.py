@@ -42,19 +42,26 @@ class Post(models.Model):
     def __str__(self):
         return self.Title
 
-class UserComment(models.Model):
-    post = models.ForeignKey(Post,on_delete=models.CASCADE,null=True, related_name='comments')
-    name = models.CharField(max_length=80,null=True)
-    email = models.EmailField(null=True,)
-    body = models.TextField(null=True,)
-    created_on = models.DateTimeField(auto_now_add=True,null=True,)
-    active = models.BooleanField(default=False,)
 
-    # class Meta:
-    #     ordering = ['created_on']
+class Comment(models.Model):
+    user_name = models.CharField(max_length=120)
+    user_email = models.EmailField()
+    text = models.TextField(max_length=500)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
 
-    def __str__(self):
-        return f'Comment {self.body} by {self.name}'
+# class UserComment(models.Model):
+#     post = models.ForeignKey(Post,on_delete=models.CASCADE,null=True, related_name='comments')
+#     name = models.CharField(max_length=80,null=True)
+#     email = models.EmailField(null=True,)
+#     body = models.TextField(null=True,)
+#     created_on = models.DateTimeField(auto_now_add=True,null=True,)
+#     active = models.BooleanField(default=False,)
+
+#     # class Meta:
+#     #     ordering = ['created_on']
+
+#     def __str__(self):
+#         return f'Comment {self.body} by {self.name}'
     
 
 
